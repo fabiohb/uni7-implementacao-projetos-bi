@@ -90,7 +90,6 @@ CREATE TABLE IF NOT EXISTS dim_produto (
   id_produto SERIAL NOT NULL,
   cd_produto VARCHAR(10) NULL,
   ds_produto VARCHAR(100) NULL,
-  nm_marca VARCHAR(20) NULL,
   ds_grupo VARCHAR(60) NULL,
   PRIMARY KEY (id_produto))
 ;
