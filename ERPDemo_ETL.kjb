@@ -290,6 +290,7 @@
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
+      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -305,11 +306,13 @@
       <nr>0</nr>
       <xloc>64</xloc>
       <yloc>144</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Carrega Dimensoes</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/Carrega_Dimensoes.ktr</filename>
@@ -341,11 +344,13 @@
       <nr>0</nr>
       <xloc>304</xloc>
       <yloc>144</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Carrega Fatos</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/Carrega_Fatos.ktr</filename>
@@ -377,11 +382,13 @@
       <nr>0</nr>
       <xloc>432</xloc>
       <yloc>144</yloc>
+      <attributes_kjc/>
     </entry>
     <entry>
       <name>Limpeza</name>
       <description/>
       <type>TRANS</type>
+      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/Limpeza.ktr</filename>
@@ -413,6 +420,7 @@
       <nr>0</nr>
       <xloc>176</xloc>
       <yloc>144</yloc>
+      <attributes_kjc/>
     </entry>
   </entries>
   <hops>

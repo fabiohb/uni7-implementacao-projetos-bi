@@ -486,6 +486,7 @@ delete from dim_vendedor;</sql>
     <read_field/>
     <arguments>
     </arguments>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -504,4 +505,5 @@ delete from dim_vendedor;</sql>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>

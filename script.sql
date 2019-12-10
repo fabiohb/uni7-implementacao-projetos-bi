@@ -9,7 +9,6 @@ CREATE TABLE IF NOT EXISTS dim_loja (
   nm_empresa VARCHAR(60) NULL,
   cd_loja VARCHAR(5) NULL,
   ds_loja VARCHAR(30) NULL,
-  ds_endereco VARCHAR(255) NULL,
   cd_cep VARCHAR(8) NULL,
   nm_bairro VARCHAR(50) NULL,
   nm_cidade VARCHAR(50) NULL,
@@ -72,7 +71,6 @@ CREATE TABLE IF NOT EXISTS dim_cliente (
   cd_cliente VARCHAR(5) NULL,
   nm_cliente VARCHAR(255) NULL,
   cd_tipo_pessoa CHAR(1) NULL,
-  ds_endereco VARCHAR(255) NULL,
   cd_cep VARCHAR(8) NULL,
   nm_bairro VARCHAR(50) NULL,
   nm_cidade VARCHAR(50) NULL,
@@ -108,7 +106,7 @@ CREATE TABLE IF NOT EXISTS fato_venda (
   id_loja INT NOT NULL,
   id_tempo INT NOT NULL,
   vl_venda DOUBLE PRECISION NULL,
-  vl_compra DOUBLE PRECISION NULL,
+  vl_custo DOUBLE PRECISION NULL,
   vl_lucro DOUBLE PRECISION NULL,
   qt_item INT NULL,
   CONSTRAINT fk_fato_venda_dim_fatura
@@ -156,3 +154,4 @@ CREATE INDEX fk_fato_venda_dim_loja1_idx ON fato_venda (id_loja ASC);
 CREATE INDEX fk_fato_venda_dim_tempo1_idx ON fato_venda (id_tempo ASC);
 
 CREATE UNIQUE INDEX uk_fato_venda ON fato_venda (id_fatura ASC, id_cliente ASC, id_produto ASC, id_vendedor ASC, id_loja ASC, id_tempo ASC);
+
