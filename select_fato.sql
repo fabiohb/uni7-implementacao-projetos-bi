@@ -1,4 +1,25 @@
 select
+	it.ift_empresa,
+	it.ift_loja,
+	it.ift_numfat,
+	it.ift_quantfatc as qtd_faturada,
+--	it.ift_qtddeemb,
+--	it.ift_qtdporemb,
+--	it.ift_valuniemb,
+	it.ift_custitm as custo_unidade,
+	it.ift_valor as valor_unidade,
+	it.ift_quantfatc * it.ift_custitm as custo_item,
+	it.ift_valitm as valor_item,
+	it.ift_valitm - (it.ift_quantfatc * it.ift_custitm) as lucro,
+	'-',
+	*
+from
+	item_fatura it
+where
+	it.ift_numfat = '00023830'
+--	f.fat_tipped = 'V'
+;
+select
     -- Dimensoes
     loja.loj_denloj      as loja_descricao,
 

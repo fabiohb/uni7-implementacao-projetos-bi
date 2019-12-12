@@ -55,7 +55,10 @@ DROP TABLE IF EXISTS dim_fatura ;
 
 CREATE TABLE IF NOT EXISTS dim_fatura (
   id_fatura SERIAL NOT NULL,
-  nr_nota VARCHAR(8) NULL,
+  cd_empresa VARCHAR(2) NULL,
+  cd_loja VARCHAR(5) NULL,
+  cd_fatura VARCHAR(8) NULL,
+  nr_nota VARCHAR(44) NULL,
   ds_status CHAR(1) NULL,
   PRIMARY KEY (id_fatura))
 ;
