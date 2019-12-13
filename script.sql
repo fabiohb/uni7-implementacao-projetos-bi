@@ -159,6 +159,12 @@ CREATE INDEX fk_fato_venda_dim_tempo_idx ON fato_venda (id_tempo ASC);
 
 CREATE UNIQUE INDEX uk_fato_venda ON fato_venda (id_fatura ASC, id_cliente ASC, id_produto ASC, id_vendedor ASC, id_loja ASC, id_tempo ASC, cd_seq_item ASC);
 
+
+create index idx_dim_fatura_01 on dim_fatura (cd_empresa, cd_loja, cd_fatura);
+create index idx_dim_tempo_01 on dim_tempo (dt_data);
+create index idx_dim_produto_01	on dim_produto (cd_produto);
+
+
 CREATE TABLE fato_venda_temp
 (
   ift_empresa VARCHAR(2)
@@ -177,3 +183,4 @@ CREATE TABLE fato_venda_temp
 , vl_lucro DOUBLE PRECISION
 )
 ;
+

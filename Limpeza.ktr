@@ -472,7 +472,12 @@
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>-- Delete Rows
+    <sql>-- Drop Indexes
+drop index if exists idx_dim_fatura_01;
+drop index if exists idx_dim_tempo_01;
+drop index if exists idx_dim_produto_01;
+
+-- Delete Rows
 delete from fato_venda;
 delete from dim_produto;
 delete from dim_tempo;
@@ -500,11 +505,11 @@ VALUES(-1, 'NE', 'NÃO ENCONTRADO', 'N', 'NE', 'NÃO ENCONTRADO', 'NÃO ENCONTRA
 
 INSERT INTO dim_loja
 (id_loja, cd_empresa, nm_empresa, cd_loja, ds_loja, cd_cep, nm_bairro, nm_cidade, nm_estado)
-VALUES(-1, 'NE', 'NÃO ENCONTRADO', 'NE', 'NÃO EMCONTRADO', 'NE', 'NÃO EMCONTRADO', 'NÃO EMCONTRADO', 'NE');
+VALUES(-1, 'NE', 'NÃO ENCONTRADO', 'NE', 'NÃO ENCONTRADO', 'NE', 'NÃO ENCONTRADO', 'NÃO ENCONTRADO', 'NE');
 
 INSERT INTO dim_produto
 (id_produto, cd_produto, ds_produto, ds_grupo)
-VALUES(-1, 'NE', 'NÃO EMCONTRADO', 'NÃO EMCONTRADO');</sql>
+VALUES(-1, 'NE', 'NÃO ENCONTRADO', 'NÃO ENCONTRADO');</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -512,7 +517,6 @@ VALUES(-1, 'NE', 'NÃO EMCONTRADO', 'NÃO EMCONTRADO');</sql>
     <read_field/>
     <arguments>
     </arguments>
-    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -531,5 +535,4 @@ VALUES(-1, 'NE', 'NÃO EMCONTRADO', 'NÃO EMCONTRADO');</sql>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
-  <attributes/>
 </transformation>

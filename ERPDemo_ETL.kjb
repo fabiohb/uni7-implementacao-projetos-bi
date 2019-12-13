@@ -290,7 +290,6 @@
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
-      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -306,13 +305,11 @@
       <nr>0</nr>
       <xloc>64</xloc>
       <yloc>144</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>Carrega Dimensoes</name>
       <description/>
       <type>TRANS</type>
-      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/Carrega_Dimensoes.ktr</filename>
@@ -342,15 +339,13 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>304</xloc>
+      <xloc>336</xloc>
       <yloc>144</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>Carrega Fatos</name>
       <description/>
       <type>TRANS</type>
-      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/Carrega_Fatos.ktr</filename>
@@ -382,13 +377,11 @@
       <nr>0</nr>
       <xloc>720</xloc>
       <yloc>144</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>Limpeza</name>
       <description/>
       <type>TRANS</type>
-      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/Limpeza.ktr</filename>
@@ -420,13 +413,11 @@
       <nr>0</nr>
       <xloc>176</xloc>
       <yloc>144</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>Carrega Dados Temporários</name>
       <description/>
       <type>TRANS</type>
-      <attributes/>
       <specification_method>filename</specification_method>
       <trans_object_id/>
       <filename>${Internal.Entry.Current.Directory}/carrega-dados-temporarios.ktr</filename>
@@ -458,19 +449,16 @@
       <nr>0</nr>
       <xloc>512</xloc>
       <yloc>144</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>Success</name>
       <description/>
       <type>SUCCESS</type>
-      <attributes/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>896</xloc>
       <yloc>144</yloc>
-      <attributes_kjc/>
     </entry>
   </entries>
   <hops>
