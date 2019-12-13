@@ -108,6 +108,7 @@ CREATE TABLE IF NOT EXISTS fato_venda (
   id_vendedor INT NOT NULL,
   id_loja INT NOT NULL,
   id_tempo INT NOT NULL,
+  cd_seq_item INT NOT NULL,
   vl_venda DOUBLE PRECISION NULL,
   vl_custo DOUBLE PRECISION NULL,
   vl_lucro DOUBLE PRECISION NULL,
@@ -146,15 +147,33 @@ CREATE TABLE IF NOT EXISTS fato_venda (
 
 CREATE INDEX fk_fato_venda_dim_fatura_idx ON fato_venda (id_fatura ASC);
 
-CREATE INDEX fk_fato_venda_dim_cliente1_idx ON fato_venda (id_cliente ASC);
+CREATE INDEX fk_fato_venda_dim_cliente_idx ON fato_venda (id_cliente ASC);
 
-CREATE INDEX fk_fato_venda_dim_produto1_idx ON fato_venda (id_produto ASC);
+CREATE INDEX fk_fato_venda_dim_produto_idx ON fato_venda (id_produto ASC);
 
-CREATE INDEX fk_fato_venda_dim_vendedor1_idx ON fato_venda (id_vendedor ASC);
+CREATE INDEX fk_fato_venda_dim_vendedor_idx ON fato_venda (id_vendedor ASC);
 
-CREATE INDEX fk_fato_venda_dim_loja1_idx ON fato_venda (id_loja ASC);
+CREATE INDEX fk_fato_venda_dim_loja_idx ON fato_venda (id_loja ASC);
 
-CREATE INDEX fk_fato_venda_dim_tempo1_idx ON fato_venda (id_tempo ASC);
+CREATE INDEX fk_fato_venda_dim_tempo_idx ON fato_venda (id_tempo ASC);
 
-CREATE UNIQUE INDEX uk_fato_venda ON fato_venda (id_fatura ASC, id_cliente ASC, id_produto ASC, id_vendedor ASC, id_loja ASC, id_tempo ASC);
+CREATE UNIQUE INDEX uk_fato_venda ON fato_venda (id_fatura ASC, id_cliente ASC, id_produto ASC, id_vendedor ASC, id_loja ASC, id_tempo ASC, cd_seq_item ASC);
 
+CREATE TABLE fato_venda_temp
+(
+  ift_empresa VARCHAR(2)
+, ift_loja VARCHAR(5)
+, ift_numfat VARCHAR(8)
+, fat_codpes VARCHAR(5)
+, fat_codven VARCHAR(5)
+, ift_seqitm VARCHAR(5)
+, ift_item VARCHAR(10)
+, fat_datfat DATE
+, qt_item DOUBLE PRECISION
+, vl_unitario_custo DOUBLE PRECISION
+, vl_unitario_item DOUBLE PRECISION
+, vl_custo DOUBLE PRECISION
+, vl_venda DOUBLE PRECISION
+, vl_lucro DOUBLE PRECISION
+)
+;
